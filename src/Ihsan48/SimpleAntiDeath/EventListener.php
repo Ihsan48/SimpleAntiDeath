@@ -24,67 +24,67 @@ class EventListener implements Listener {
         $cause = $ev->getCause();
         if ($entity instanceof Player) {
             if ($cause === EntityDamageEvent::CAUSE_CONTACT) {
-                if ($this->plugin->checkWorlds($entity->getWorld)) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_ENTITY_ATTACK) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_PROJECTILE) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+                if (($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_SUFFOCATION) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+                if (($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_FALL) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+                if (($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_FIRE) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+                if (($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_FIRE_TICK) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+                if (($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_LAVA) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+                if (($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
-            if ($cause === EntityDamageEvent::CAUSE_DROWNING) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+            if ($cause === EntityDamageEvent::CAUSE_DROWNING()) {
+                if (($this->plugin->checkWorlds($entity->getWorld)) {
                     $ev->cancel();
                 }
             }
 
-            if ($cause === EntityDamageEvent::CAUSE_BLOCK_EXPLOSION) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+            if ($cause === EntityDamageEvent::CAUSE_BLOCK_EXPLOSION()) {
+                if (($this->plugin->checkWorlds($entity->getWorld)) {
                     $ev->cancel();
                 }
             }
 
-            if ($cause === EntityDamageEvent::CAUSE_ENTITY_EXPLOSION) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+            if ($cause === EntityDamageEvent::CAUSE_ENTITY_EXPLOSION()) {
+                if (($this->plugin->checkWorlds($entity->getWorld)) {
                     $ev->cancel();
                 }
             }
