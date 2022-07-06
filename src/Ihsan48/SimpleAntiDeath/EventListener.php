@@ -36,55 +36,55 @@ class EventListener implements Listener {
             }
 
             if ($cause === EntityDamageEvent::CAUSE_PROJECTILE) {
-                if (($this->plugin->checkWorlds($entity->getWorld())) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_SUFFOCATION) {
-                if (($this->plugin->checkWorlds($entity->getWorld())) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_FALL) {
-                if (($this->plugin->checkWorlds($entity->getWorld())) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_FIRE) {
-                if (($this->plugin->checkWorlds($entity->getWorld())) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_FIRE_TICK) {
-                if (($this->plugin->checkWorlds($entity->getWorld())) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_LAVA) {
-                if (($this->plugin->checkWorlds($entity->getWorld())) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_DROWNING()) {
-                if (($this->plugin->checkWorlds($entity->getWorld)) {
+                if ($this->plugin->checkWorlds($entity->getWorld)) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_BLOCK_EXPLOSION()) {
-                if (($this->plugin->checkWorlds($entity->getWorld)) {
+                if ($this->plugin->checkWorlds($entity->getWorld)) {
                     $ev->cancel();
                 }
             }
 
             if ($cause === EntityDamageEvent::CAUSE_ENTITY_EXPLOSION()) {
-                if (($this->plugin->checkWorlds($entity->getWorld)) {
+                if ($this->plugin->checkWorlds($entity->getWorld)) {
                     $ev->cancel();
                 }
             }
