@@ -127,6 +127,6 @@ class EventListener implements Listener {
         } else {
             $pos = $player->getWorld()->getSpawnLocation();
         }
-        $player->teleport($position);
+        $player->teleport($pos);
     }
 }
