@@ -14,6 +14,10 @@ use pocketmine\event\player\PlayerExhaustEvent;
 use Ihsan48\SimpleAntiDeath\AntiDeath;
 
 class EventListener implements Listener {
+    
+    public function __construct(private AntiDeath $plugin) {
+        $this->plugin = $plugin;
+    }
 
     public function onDamage(EntityDamageEvent $ev) {
         $entity = $ev->getEntity();
