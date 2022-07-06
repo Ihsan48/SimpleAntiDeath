@@ -1,0 +1,8 @@
+# SimpleAntiDeath Configuration
+
+# Don't change this
+config-version: 1.0.0
+
+# Select a specific Worlds for AntiDeath
+# Example: ["lobby"]
+Enable-In-Worlds: [ ]
