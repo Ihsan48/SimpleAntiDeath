@@ -71,19 +71,19 @@ class EventListener implements Listener {
                 }
             }
 
-            if ($cause === EntityDamageEvent::CAUSE_DROWNING()) {
+            if ($cause === EntityDamageEvent::CAUSE_DROWNING) {
                 if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
                     
-            if ($cause === EntityDamageEvent::CAUSE_BLOCK_EXPLOSION()) {
+            if ($cause === EntityDamageEvent::CAUSE_BLOCK_EXPLOSION) {
                 if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
 
-            if ($cause === EntityDamageEvent::CAUSE_ENTITY_EXPLOSION()) {
+            if ($cause === EntityDamageEvent::CAUSE_ENTITY_EXPLOSION) {
                 if ($this->plugin->checkWorlds($entity->getWorld)) {
                     $ev->cancel();
                 }
