@@ -84,7 +84,7 @@ class EventListener implements Listener {
             }
 
             if ($cause === EntityDamageEvent::CAUSE_ENTITY_EXPLOSION) {
-                if ($this->plugin->checkWorlds($entity->getWorld)) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
