@@ -2,6 +2,7 @@
 
 namespace Ihsan48\SimpleAntiDeath;
 
+use pocketmine\Server;
 use pocketmine\player\Player;
 
 use pocketmine\event\Listener;
@@ -81,11 +82,51 @@ class EventListener implements Listener {
                 }
             }
 
+            if ($cause === EntityDamageEvent::CAUSE_VOID) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
+                    $this->saveVoid($entity);
+                    $ev->cancel();
+                }
+            }
+            
             if ($cause === EntityDamageEvent::CAUSE_ENTITY_EXPLOSION) {
                 if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
+            
+            if ($cause === EntityDamageEvent::CAUSE_SUICIDE) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
+                    $ev->cancel();
+                }
+            }
+            
+            if ($cause === EntityDamageEvent::CAUSE_MAGIC) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
+                    $ev->cancel();
+                }
+            }
+            
+            if ($cause === EntityDamageEvent::CAUSE_CUSTOM) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
+                    $ev->cancel();
+                }
+            }
+            
+            if ($cause === EntityDamageEvent::CAUSE_STARVATION) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
+                    $ev->cancel();
+                }
+            }
         }
+    }
+    
+    public function saveVoid(Player $player) {
+        if ($this->plugin->cfg->get("use-default-world")) {
+            $pos = Server::getInstance()->getWorldManager()->getDefaultWorld()->getSpawnLocation();
+        } else {
+            $pos = $player->getWorld()->getSpawnLocation();
+        }
+        $player->teleport($position);
     }
 }
