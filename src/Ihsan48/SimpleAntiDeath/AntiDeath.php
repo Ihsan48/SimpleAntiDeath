@@ -25,7 +25,7 @@ class AntiDeath extends PluginBase {
 
     public function onEnable() : void {
         $this->cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML);
-        $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $thiis);
+        $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
         $this->getScheduler()->scheduleRepeatingTask(new AntiDeathTask($this), 20);
         $this->enableInWorlds = $this->cfg->get("Enable-In-Worlds");
     }
