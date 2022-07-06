@@ -4,8 +4,6 @@ namespace Ihsan48\SimpleAntiDeath;
 
 use pocketmine\player\Player;
 
-use pocketmine\world\World;
-
 use pocketmine\event\Listener;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
