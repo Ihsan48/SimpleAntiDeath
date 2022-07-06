@@ -72,7 +72,7 @@ class EventListener implements Listener {
             }
 
             if ($cause === EntityDamageEvent::CAUSE_DROWNING()) {
-                if ($this->plugin->checkWorlds($entity->getWorld()) {
+                if ($this->plugin->checkWorlds($entity->getWorld())) {
                     $ev->cancel();
                 }
             }
