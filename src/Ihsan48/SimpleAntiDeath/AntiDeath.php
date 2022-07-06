@@ -33,7 +33,7 @@ class AntiDeath extends PluginBase {
     public function checkVersion() : void {
         if ($this->cfg->get("config-version") != "1.0.0") {
             $this->getLogger()->notice("Your configuration is Outdate!");
-            $thid->getLogger()->info("Your old config.yml is renamed as old-config.yml");
+            $this->getLogger()->info("Your old config.yml is renamed as old-config.yml");
             @rename($this->getDataFOlder() . "config.yml", "old-config.yml");
             $this->saveResource("config.yml");
         }
