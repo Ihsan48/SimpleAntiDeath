@@ -24,7 +24,7 @@ class EventListener implements Listener {
         $cause = $ev->getCause();
         if ($entity instanceof Player) {
             if ($cause === EntityDamageEvent::CAUSE_CONTACT) {
-                if (AntiDeath::checkWorlds($entity->getWorld)) {
+                if ($this->plugin->checkWorlds($entity->getWorld)) {
                     $ev->cancel();
                 }
             }
