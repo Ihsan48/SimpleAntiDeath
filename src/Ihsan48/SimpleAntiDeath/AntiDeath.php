@@ -13,9 +13,9 @@ use Ihsan48\SimpleAntiDeath\task\AntiDeathTask;
 
 class AntiDeath extends PluginBase {
 
-    public $cfg;
+    public Config $cfg;
 
-    public $enableInWorlds = [];
+    public array $enableInWorlds = [];
 
     public function onLoad() : void {
         $this->saveResource("config.yml");
