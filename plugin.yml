@@ -1,5 +1,5 @@
 name: SimpleAntiDeath
-version: 1.0.0-dev-1
-author: Ihsan48
+version: 1.0.0
+author: Ihsan48-beta
 main: Ihsan48\SimpleAntiDeath\AntiDeath
 api: 4.0.0
